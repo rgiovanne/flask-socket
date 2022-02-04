@@ -1,12 +1,10 @@
 from config.blacklist import BLACKLIST
 from flask import jsonify, session
 from flask_jwt_extended import JWTManager
-from flask_restful import Api
+from flask_restful import Api,request
 from routes.routes import View
 from flask_socketio import SocketIO
 from config.appConfig import create_app
-from flask_restful import request
-from flask_socketio import emit
 
 app = create_app()
 socketio = SocketIO(app,cors_allowed_origins="*")
